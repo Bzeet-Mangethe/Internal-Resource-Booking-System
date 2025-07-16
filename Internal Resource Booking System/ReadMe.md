@@ -6,7 +6,7 @@ This is a web-based booking system built using **ASP.NET Core MVC** and **Entity
 ## 💬 Author
 Name  : Bhekani Masinga || 
 Email : bamasingahbhekanie@gmail.com || 
-GitHub: github.com/yourusername
+GitHub: https://github.com/Bzeet-Mangethe/Internal-Resource-Booking-System.git
 
 ## 🔐 Features
 
