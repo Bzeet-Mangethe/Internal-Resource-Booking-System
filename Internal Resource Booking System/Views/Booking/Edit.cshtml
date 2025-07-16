@@ -1,0 +1,38 @@
+﻿@model InternalResourceBookingSystem.Models.Booking
+
+<h2>Edit Booking</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+        <div class="mb-3">
+            <label class="form-label">Resource</label>
+            <select asp-for="ResourceId" class="form-select" asp-items="ViewBag.Resources"></select>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="StartTime" class="form-label"></label>
+            <input asp-for="StartTime" type="datetime-local" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="EndTime" class="form-label"></label>
+            <input asp-for="EndTime" type="datetime-local" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="BookedBy" class="form-label"></label>
+            <input asp-for="BookedBy" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Purpose" class="form-label"></label>
+            <input asp-for="Purpose" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Book</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+
+        <div class="text-danger mt-2">
+            @Html.ValidationSummary()
+        </div>
+    </form>

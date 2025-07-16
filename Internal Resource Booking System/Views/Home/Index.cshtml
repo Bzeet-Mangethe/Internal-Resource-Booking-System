@@ -1,0 +1,78 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+    var email = user?.Email ?? "";
+}
+
+
+@{
+    ViewData["Title"] = "Dashboard";
+    var todays = ViewBag.TodaysBookings as List<InternalResourceBookingSystem.Models.Booking>;
+    var upcoming = ViewBag.UpcomingBookings as List<InternalResourceBookingSystem.Models.Booking>;
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-5 fw-bold text-primary">Internal Resource Booking System</h1>
+        <p class="lead">Welcome! Here are today's and upcoming bookings.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4 class="text-success">📅 Today's Bookings</h4>
+           @if (todays != null && todays.Count > 0)
+            {
+                <ul class="list-group">
+                    @foreach (var b in todays)
+                    {
+                        <li class="list-group-item">
+                            <strong>@b.Purpose</strong><br />
+                            <small>Time: @b.StartTime.ToShortTimeString() - @b.EndTime.ToShortTimeString()</small><br />
+                            <small>Resource: @b.Resource?.Name</small><br />
+                            <small>Booked by: @b.BookedBy</small>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p class="text-muted">No bookings for today.</p>
+            }
+        </div>
+
+        <div class="col-md-6">
+            <h4 class="text-info">⏳ Upcoming Bookings</h4>
+            @if (upcoming != null && upcoming.Count > 0)
+            {
+                <ul class="list-group">
+                    @foreach (var b in upcoming)
+                    {
+                        <li class="list-group-item">
+                            <strong>@b.Purpose</strong><br />
+                            <small>Date: @b.StartTime.ToShortDateString()</small><br />
+                            <small>Time: @b.StartTime.ToShortTimeString() - @b.EndTime.ToShortTimeString()</small><br />
+                            <small>Resource: @b.Resource?.Name</small><br />
+                            <small>Booked by: @b.BookedBy</small>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p class="text-muted">No upcoming bookings.</p>
+            }
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        @if (User.IsInRole("Admin") || email == "admin@example.com")
+        {
+        <a class="btn btn-outline-primary me-2" href="/Resource">Manage Resources</a>
+        }
+
+        <!--<a class="btn btn-outline-primary me-2" href="/Resource">Manage Resources</a>-->
+        <a class="btn btn-outline-success" href="/Booking">View All Bookings</a>
+    </div>
+</div>

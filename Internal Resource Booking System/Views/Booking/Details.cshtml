@@ -1,0 +1,25 @@
+﻿@model InternalResourceBookingSystem.Models.Booking
+
+<h2>Booking Details</h2>
+
+<dl class="row">
+    <dt class="col-sm-3">Purpose</dt>
+    <dd class="col-sm-9">@Model.Purpose</dd>
+
+    <dt class="col-sm-3">Resource</dt>
+    <dd class="col-sm-9">@Model.Resource?.Name</dd>
+
+    <dt class="col-sm-3">Start Time</dt>
+    <dd class="col-sm-9">@Model.StartTime.ToString("f")</dd>
+
+    <dt class="col-sm-3">End Time</dt>
+    <dd class="col-sm-9">@Model.EndTime.ToString("f")</dd>
+
+    <dt class="col-sm-3">Booked By</dt>
+    <dd class="col-sm-9">@Model.BookedBy</dd>
+</dl>
+
+<p>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    <a class="btn btn-secondary" asp-action="Index">Back</a>
+</p>
