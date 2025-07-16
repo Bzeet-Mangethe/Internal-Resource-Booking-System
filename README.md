@@ -24,36 +24,34 @@ GitHub: github.com/yourusername
 ## 🧪 Screenshots
 
 ### 🧑‍ Registration
-<img src="screenshots/registER.jpg" width="600" />
+![register](https://github.com/user-attachments/assets/83adf8d7-fbb3-4b13-a601-770a56f39d8e)
 
 ### 🔐 1st Time Login
-<img src="screenshots/login1.jpg" width="600" />
+![login](https://github.com/user-attachments/assets/89ee4bfd-72d1-4d52-a9b8-eac3a133cfac)
 
 ### 🔐 Login
-<img src="screenshots/login.jpg" width="600" />
+![login](https://github.com/user-attachments/assets/12445289-57d7-4808-8c23-51783073eba9)
 
 ### 🔐 Reset Password
-<img src="screenshots/resetPassword.jpg" width="600" />
+![resetPassword](https://github.com/user-attachments/assets/d9a3bddb-aa32-443e-ada9-9b0819c13941)
 
 ### 🔐 Resed Email
-<img src="screenshots/resendEmail.jpg" width="600" />
+![resetPassword](https://github.com/user-attachments/assets/b51b6876-a746-4d2a-abc9-85f36ca2753e)
 
 ### 🏠 Admin Dashboard
-<img src="screenshots/dashboard.jpg" width="600" />
-
+![dashboard](https://github.com/user-attachments/assets/542a2640-ccaf-4323-af7f-ed594e761e0d)
 
 ## 🏠 User Dashboard
-<img src="screenshots/userDashboard.jpg" width="600" />
+![userDashboard](https://github.com/user-attachments/assets/7ccbe174-0ab0-43ec-9b52-93c7dd4529da)
 
 ### 📝 Admin Booking Form
-<img src="screenshots/bookings.jpg" width="600" />
+![bookings](https://github.com/user-attachments/assets/a3df7c69-967f-4d04-9e4e-fd981535917d)
 
 ### 📝 User Booking Form
-<img src="screenshots/userbookings.jpg" width="600" />
+![userbookings](https://github.com/user-attachments/assets/57ab663c-48f1-40b9-a9c1-823bbc780e8c)
 
 ### 🧑‍💼 Admin - Manage Resources
-<img src="screenshots/resources.jpg" width="600" />
-
+![resources](https://github.com/user-attachments/assets/dc2543c5-a96a-487c-97ed-f266b91ec1c5)
 
 ## 💻 Tech Stack
 
